@@ -1,0 +1,17 @@
+# ArgoCD Installation YAML
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  project: default
+  source:
+    path: nginx
+    repoURL: 'https://github.com/aisrael/gitops'
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
