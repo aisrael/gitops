@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: nginx
-    repoURL: 'https://github.com/aisrael/gitops'
+    repoURL: https://github.com/aisrael/gitops.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
