@@ -6,7 +6,7 @@ metadata:
   labels:
     tags.datadoghq.com/env: production
     tags.datadoghq.com/service: sandbox
-    tags.datadoghq.com/version: 1fba95127c1bc77aa2548e185ad0bc35a58d1bf0
+    tags.datadoghq.com/version: 8db1e55a8506500779e702f0762c42ce3e43f6f2
 spec:
   destination:
     name: in-cluster
