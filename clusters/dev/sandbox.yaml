@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sandbox
+  namespace: argocd
+  labels:
+    tags.datadoghq.com/env: dev
+    tags.datadoghq.com/service: sandbox
+    tags.datadoghq.com/version: 918d929d5f
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  project: default
+  source:
+    repoURL: 'https://github.com/aisrael/gitops'
+    path: charts/sandbox/dev
+    targetRevision: main
+    helm:
+      releaseName: sandbox
+      valueFiles:
+        - vars/dev.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
