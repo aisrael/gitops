@@ -16,4 +16,4 @@ type: application
 version: 0.1.0
 # This is the version number of the application being deployed. We leave it blank as a reminder
 # that the gitops-push action should set it to the latest tag.
-appVersion: "v0.1.8"
+appVersion: "v0.1.10"
